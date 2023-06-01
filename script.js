@@ -55,3 +55,95 @@
 //     return (newArr)
 // }
 // console.log(seyHi(['мир', 'программирования']));
+
+// ..........................................task 1  
+// Напишите функцию, которая принимает массив чисел, 
+// строк и булеан если тип булеан сделайте противоположное значение.
+// принимаем let arr = [1,2,3,4,”string”, “hello”, true, false] 
+// получаем let newArr = [1,2,3,4,”string”, “hello”, false, true]
+
+// const getReverse = (arr) => {
+//   return arr.map((el) => {
+//     if (el === true){
+//         return false
+//     }else if ( el === false){
+//          return true  
+//     } else{
+//         return el
+//     }
+//    })
+// }
+// console.log(getReverse([1,2,3,4,'string', 'hello', true, false]));
+
+
+// ..........................................task 2
+// Напишите функцию, которая принимает строку и повторяем каждый ее символ 2 раза.
+// Пример входных данных: "test"
+// ВЫВОД: "tteesstt"
+
+// const getDouble = (str) => {
+//     return str.split("").map((el) => {
+//     return el + el
+//   }).join("")
+// }
+// console.log(getDouble("test"));
+
+// ..........................................task 3
+// Напишите функцию которая принимает массив ['Ваня', 'Антон', 'Ян', 'Джонни', 'Том', 'Бекнур'],
+// если в этом массиве есть строки 'Ян' и 'Том' то верните длину этих строк, иначе верните строку.
+// ВЫВОД: [ 'Ваня', 'Антон', 2, 'Джонни', 3, 'Бекнур' ]
+
+
+// const getLength = (arr)=>{
+//   return arr.map((el)=>{
+//         if(el ==='Ян' || el ==='Том' ){
+//             return el.length;
+//           } else{
+//             return el
+//           }
+//       })
+   
+// }
+// console.log(getLength(['Ваня', 'Антон', 'Ян', 'Джонни', 'Том', 'Бекнур']));
+
+// ..........................................task 4
+// Напишите функцию которая принимает массив из чисел и возводит четные числа в квадрат.
+
+// const getSquare = (arr) => {
+//    return arr.map((el)=>{
+//         if(el % 2 === 0){
+//             return el*2
+//         }else{
+//             return el
+//         }
+//      })
+// }
+// console.log(getSquare([1,2,3,4,5]));
+
+// ..........................................task 5
+// Напишите функцию которая принимает массив из строк и чисел,
+// и выводит длину каждой строки, а если число, то выводит его индекс
+ 
+// const getLength = (arr)=>{
+//    const newArr = arr.map((el, idx)=>{
+//     if(typeof el === 'string'){
+//       return el.length
+//     }else if(typeof el === 'number'){
+//       return idx
+//     }
+//    })
+//  return newArr
+// }
+// console.log(getLength(['hello', 3, 'javascript']));
+
+// .task 6
+// Напишите функцию которая принимает массив из чисел, и умножает каждое число на последнее значение массива.
+
+const getLast = (arr) => {
+    const newArr = arr.map((el) => {
+      return el * arr[arr.length - 1];
+    });
+    return newArr;
+  };
+  
+  console.log(getLast([1, 2, 3, 4, 5]));
